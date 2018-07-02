@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="base_green">#95c327</color>
+    <color name="dark_green">#87b426</color>
+    <color name="base_gray">#ebecef</color>
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="txt_gray">#a3a3a3</color>
+    <color name="txt_red">#e53935</color>
+    <color name="line_gray">#d6d6d6</color>
+    <color name="underton_gray">#eeeeee</color>
+    <color name="super_dark_gray">#313131</color>
+    <color name="dark_gray">#444444</color>
+    <color name="young_cyan">#52daae</color>
+    <color name="old_blue">#3e4f5f</color>
+    <color name="hope_green">#8fc31f</color>
+    <color name="transparent">#00000000</color>
+    <color name="ocean_blue">#0055a8</color>
+    <color name="ocean_blue_light">#b0d7f2</color>
+    <color name="red_sunset">#fd5840</color>
+    <color name="white_opacity">#aaffffff</color>
+    <color name="black_opacity">#33000000</color>
+
+    <color name="loading_cover">#88000000</color>
+
+</resources>

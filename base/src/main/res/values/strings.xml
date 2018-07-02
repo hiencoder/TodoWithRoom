@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Base</string>
+
+
+    <!--common dialog-->
+    <string name="dialog_error_timeout">API timeout</string>
+    <string name="dialog_error_no_connection">No internet connection</string>
+    <string name="dialog_error_api">API error</string>
+    <string name="dialog_btn_close">Ok</string>
+    <string name="dialog_btn_ok">Ok</string>
+    <string name="dialog_btn_cancel">Cancel</string>
+    <string name="img_content_description">splash</string>
+
+    <string name="no_phone_number">This member have no phone number yet!</string>
+    <string name="no_email_address">This member have no email address yet!</string>
+</resources>
