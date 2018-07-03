@@ -17,10 +17,11 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class TodoAdapter extends RecyclerView.Adapter<TodoAdapter.TodoHolder>{
+public class TodoAdapter extends RecyclerView.Adapter<TodoAdapter.TodoHolder> {
     private Context context;
     private List<Todo> todoList;
     private OnItemClickListener onItemClickListener;
+
     public TodoAdapter(Context context, List<Todo> todoList, OnItemClickListener listener) {
         this.context = context;
         this.todoList = todoList;
@@ -30,7 +31,7 @@ public class TodoAdapter extends RecyclerView.Adapter<TodoAdapter.TodoHolder>{
     @NonNull
     @Override
     public TodoHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_todo,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_todo, parent, false);
         return new TodoHolder(view);
     }
 
@@ -42,7 +43,7 @@ public class TodoAdapter extends RecyclerView.Adapter<TodoAdapter.TodoHolder>{
 
     @Override
     public int getItemCount() {
-        return (todoList != null) ? todoList.size():0;
+        return (todoList != null) ? todoList.size() : 0;
     }
 
     public class TodoHolder extends RecyclerView.ViewHolder {
@@ -50,18 +51,40 @@ public class TodoAdapter extends RecyclerView.Adapter<TodoAdapter.TodoHolder>{
         TextView tvTitle;
         @BindView(R.id.tv_description)
         TextView tvDescription;
+        @BindView(R.id.tv_category)
+        TextView tvCategory;
 
         public TodoHolder(View itemView) {
             super(itemView);
-            ButterKnife.bind(this,itemView);
+            ButterKnife.bind(this, itemView);
             itemView.setOnClickListener(view -> {
                 onItemClickListener.onClick(todoList.get(getAdapterPosition()));
             });
         }
 
-        public void bindTodo(Todo todo){
+        public void bindTodo(Todo todo) {
             tvTitle.setText(todo.title);
             tvDescription.setText(todo.description);
+            tvCategory.setText(todo.category);
         }
+    }
+
+    /**
+     * update adapter
+     * @param todos
+     */
+    public void updateTodoList(List<Todo> todos) {
+        todoList.clear();
+        todoList.addAll(todos);
+        notifyDataSetChanged();
+    }
+
+    /**
+     * update adapter
+     * @param todo
+     */
+    public void addTodo(Todo todo){
+        todoList.add(todo);
+        notifyDataSetChanged();
     }
 }

@@ -31,7 +31,7 @@ public interface TodoDAO {
 
     /*Lay Todo theo Id*/
     @Query("SELECT * FROM " + Const.TABLE_NAME + " WHERE " + Const.ID + " = :id")
-    Todo fetchTodoById(int id);
+    Todo fetchTodoById(Long id);
 
     /*Update todo theo id*/
     @Update
